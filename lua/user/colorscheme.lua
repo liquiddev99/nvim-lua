@@ -24,7 +24,7 @@ require("tokyonight").setup({
     colors.bg = "#1f202e"
     colors.magenta = "#DA6BAE"
     colors.blue = "#4bbfa7"
-    colors.blue1 = "#e85d68"
+    colors.blue1 = "#e05e69"
     colors.fg = "#53b4f5"
     colors.cyan = "#6dde6c"
   end,
