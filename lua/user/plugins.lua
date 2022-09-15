@@ -45,6 +45,8 @@ return packer.startup(function(use)
 	use "nvim-lua/plenary.nvim"  -- Useful lua functions used by lots of plugins
   use "nvim-lua/popup.nvim"
   use "windwp/nvim-autopairs"
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
@@ -64,6 +66,9 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

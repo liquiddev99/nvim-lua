@@ -22,8 +22,6 @@ require("tokyonight").setup({
   --- function will be called with a ColorScheme table
   ---@param colors ColorScheme
   on_colors = function(colors)
-    colors.hint = colors.orange
-    colors.error = "#ff0000"
   end,
 
   --- You can override specific highlights to use other groups or a hex color
