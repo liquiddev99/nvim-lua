@@ -40,7 +40,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -65,3 +65,5 @@ keymap("n", "tn", ":NvimTreeToggle<cr>", opts)
 
 -- Close files
 keymap("n", "<C-w>", "ZZZZ", opts)
+-- Save and Format
+keymap("n", "<C-s>", ":w<CR>:lua vim.lsp.buf.format{async=true}<CR>", opts)

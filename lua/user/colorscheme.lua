@@ -21,7 +21,7 @@ require("tokyonight").setup({
   --- You can override specific color groups to use other groups or a hex color
   --- function will be called with a ColorScheme table
   on_colors = function(colors)
-    colors.bg = "#1f202e"
+    colors.bg = "#1d1e2a"
     colors.magenta = "#DA6BAE"
     colors.blue = "#4bbfa7"
     colors.blue1 = "#e05e69"
