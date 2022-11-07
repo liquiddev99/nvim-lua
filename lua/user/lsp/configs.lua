@@ -5,7 +5,8 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "tsserver", "tailwindcss", "ccsls", "html", "rome", "ccls", "clangd" }
+local servers = { "jsonls", "sumneko_lua", "tsserver", "tailwindcss", "ccsls", "html", "rome", "ccls", "clangd",
+  "rust_analyzer", "taplo" }
 
 lsp_installer.setup({
   ensure_installed = servers,
@@ -20,5 +21,33 @@ for _, server in pairs(servers) do
   if has_custom_opts then
     opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
   end
+
+  if server == "rust_analyzer" then
+    require("rust-tools").setup {
+      tools = {
+        on_initialized = function()
+          vim.cmd [[
+            autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh()
+          ]]
+        end,
+      },
+      server = {
+        on_attach = require("user.lsp.handlers").on_attach,
+        capabilities = require("user.lsp.handlers").capabilities,
+        settings = {
+          ["rust-analyzer"] = {
+            lens = {
+              enable = true,
+            },
+            checkOnSave = {
+              command = "clippy",
+            },
+          },
+        },
+      },
+    }
+    goto continue
+  end
   lspconfig[server].setup(opts)
+  ::continue::
 end

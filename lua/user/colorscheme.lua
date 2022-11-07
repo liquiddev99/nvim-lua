@@ -27,6 +27,7 @@ require("tokyonight").setup({
     colors.blue1 = "#e05e69"
     colors.fg = "#53b4f5"
     colors.cyan = "#6dde6c"
+    colors.green1 = "#4bbfa7"
   end,
 
   --- You can override specific highlights to use other groups or a hex color

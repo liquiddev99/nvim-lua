@@ -19,8 +19,8 @@ vim.g.maplocalleader = " "
 -- Normal --
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
--- keymap("n", "<A-j>", "<C-w>j", opts)
--- keymap("n", "<A-k>", "<C-w>k", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<A-l>", "<C-w>l", opts)
 
 -- Navigate between tabs
@@ -62,6 +62,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "tn", ":NvimTreeToggle<cr>", opts)
 
 -- Close files
-keymap("n", "<C-w>", "ZZZZ", opts)
+-- keymap("n", "<C-w>", "ZZZZ", opts)
 -- Save and Format
 keymap("n", "<C-s>", ":w<CR>:lua vim.lsp.buf.format{async=true}<CR>", opts)
