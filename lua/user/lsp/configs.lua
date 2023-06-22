@@ -5,7 +5,13 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "tsserver", "tailwindcss", "ccsls", "html", "rome", "ccls", "clangd",
+local nvim_lsp = require'lspconfig'
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+end
+
+local servers = { "jsonls", "tsserver", "ccsls", "html", "rome", "clangd",
+--  "tailwindcss",
   "rust_analyzer", "taplo" }
 
 lsp_installer.setup({

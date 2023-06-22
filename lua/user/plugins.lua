@@ -51,16 +51,16 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
 
   -- Treesitter - Syntax highlighting
-  use {"nvim-treesitter/nvim-treesitter", commit = "26105050aae3a15dd85feaeb0439e253e31d5ceb"}
+  use { "nvim-treesitter/nvim-treesitter", commit = "26105050aae3a15dd85feaeb0439e253e31d5ceb" }
 
   -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "25a1a77b0099ca50509ef8e141d3e414300b605f" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
+--   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
+--  use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
@@ -71,7 +71,7 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim"
+--  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
@@ -83,7 +83,7 @@ return packer.startup(function(use)
   use 'simrat39/rust-tools.nvim'
   use 'rust-lang/rust.vim'
 
-  use "mfussenegger/nvim-dap"
+--  use "mfussenegger/nvim-dap"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

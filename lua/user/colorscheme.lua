@@ -22,7 +22,7 @@ require("tokyonight").setup({
   --- function will be called with a ColorScheme table
   on_colors = function(colors)
     colors.bg = "#1d1e2a"
-    colors.magenta = "#DA6BAE"
+    colors.magenta = "#de7cb7"
     colors.blue = "#4bbfa7"
     colors.blue1 = "#e05e69"
     colors.fg = "#53b4f5"
